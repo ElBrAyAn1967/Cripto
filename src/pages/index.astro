@@ -7,16 +7,17 @@ import { Features2 } from '../components/Features2.jsx'
 import { Testimonials } from '../components/Testimonials.jsx'
 import { FeaturesDiagonal } from '../components/FeaturesDiagonal.jsx'
 import { Pricing } from '../components/Pricing.jsx'
-import { FAQ } from '../components/FAQ.jsx'
-import { Brands } from '../components/Brands.jsx'
-import { Blog } from '../components/Blog'
-import { Footer } from '../components/Footer.jsx'
+
+import { Brands } from '../components/Patrocinadores/Brands.jsx'
+import { Blog } from '../components/Blog.jsx'
+import Contac from '../components//Pie/Contac.jsx'
+import { Footer } from '../components/Pie/Footer.jsx'
 import { ScrollUpButton } from '../components/ScrollUpButton'
 import '../styles/Theme.css'
 import '../styles/Diagonals.css'
 ---
 
-<Layout title="Tailcast">
+<Layout title="CripTec">
   <Navbar client:load />
   <Hero client:load />
   <Features1 client:load />
@@ -25,8 +26,8 @@ import '../styles/Diagonals.css'
   <Pricing client:load />
   <Brands client:load />
   <Testimonials client:load />
-  <Blog client:load />
-  <FAQ client:load /> 
+  <Blog client:load /> 
+  <Contac client:load />
   <Footer />
   <ScrollUpButton client:load />
 </Layout>

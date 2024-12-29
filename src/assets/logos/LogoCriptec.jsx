@@ -1,5 +1,5 @@
 export const CriptecLogo = () => (
-    <a  target="_blank" rel="noopener noreferrer">
+  
       <svg
         width="120"
         height="120"
@@ -14,6 +14,5 @@ export const CriptecLogo = () => (
           preserveAspectRatio="xMidYMid meet" 
         />
       </svg>
-    </a>
   );
   

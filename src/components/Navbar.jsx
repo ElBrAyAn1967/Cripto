@@ -44,7 +44,7 @@ export const Navbar = () => {
     >
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} exit={{ opacity: 0 }}>
-          <a href="/#home" aria-label="Home">
+          <a href="#" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
               <CriptecLogo  />
             </div>

@@ -20,7 +20,10 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.4",
     "@fontsource/inter": "^5.0.18",
+    "@web3auth/ethereum-provider": "^9.5.1",
+    "@web3auth/modal": "^9.5.1",
     "astro": "^5.1.1",
+    "ethers": "^6.13.4",
     "framer-motion": "^11.2.10",
     "npm": "^10.8.1",
     "npm-check-updates": "^16.14.20",

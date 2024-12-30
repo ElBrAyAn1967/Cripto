@@ -34,14 +34,12 @@ export const Features2 = () => (
 
         <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-            <span className="block-subtitle">Make Data-Driven Decisions</span>
+            <span className="block-subtitle">Make decisions based on knowledge</span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Issue tracking you’ll enjoy using
-            </h2>
+            Improve your planning system through new knowledge            </h2>
             <p className="mb-12 text-secondaryText leading-loose">
-              Monitor and track data issues with ease using our intuitive and
-              efficient issue tracking system. Stay ahead of potential problems
-              and improve your workflow.
+            Unlock the full potential of Web3 with our seamless and intuitive platform.
+             Track your progress, solve challenges efficiently, and take your learning to the next level with ease.
             </p>
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">
@@ -54,7 +52,7 @@ export const Features2 = () => (
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Customizable notifications</span>
+                <span>Plan and create new areas</span>
               </li>
             </ul>
           </div>

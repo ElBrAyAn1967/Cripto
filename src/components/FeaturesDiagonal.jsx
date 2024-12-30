@@ -36,9 +36,8 @@ export const FeaturesDiagonal = () => {
               Build &amp; Launch without problems
             </h2>
             <p className="mb-16 text-secondaryText leading-loose">
-              Our platform enables you to launch your data-driven projects with
-              ease. Boost productivity and achieve better results. Empower your
-              decision-making with advanced analytics
+            "Embark on your Web3 journey and transform your future. Discover a world of innovation
+            , overcome challenges with confidence, and unlock endless possibilities in the decentralized era."
             </p>
             <button
               className="w-[210px] h-12 contained-button mr-10 "

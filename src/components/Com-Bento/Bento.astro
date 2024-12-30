@@ -1,0 +1,33 @@
+---
+import BentoItem from './BentoItem.astro';
+---
+
+<section class= {'w-full  grid grid-cols-10 auto-cols-[35rem] gap-4 mx-auto p-20'}>
+
+<BentoItem class="col-span-10 md:col-span-4" title="IMAGEN1" >
+
+<div slot="image" class=" absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735273886/shiba1_eqqomc.webp')">
+</div>
+</BentoItem>
+
+
+
+
+<BentoItem class="col-span-10 md:col-span-6" title="IMAGEN2" subtitle="COMIENDO CHIDO PIZZA ">
+    <div slot="image" class=" absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90  bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp')">
+</div>
+</BentoItem>
+<BentoItem class="col-span-10 md:col-span-6" title="IMAGEN3"  subtitle="CHELAS LA MEJOR">
+    <div slot="image" class=" absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90  bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp')">
+</div>
+</BentoItem>
+<BentoItem class="col-span-10 md:col-span-4" title="IMAGEN4" >
+    <div slot="image" class=" absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-scale duration-1000 ease-in-out opacity-90 bg-blend-luminosity bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/criptec-cuadrado_xfnyzj.webp')">
+</div>
+</BentoItem>
+
+</section>

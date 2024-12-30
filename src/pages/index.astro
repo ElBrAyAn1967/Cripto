@@ -15,6 +15,9 @@ import { Footer } from '../components/Pie/Footer.jsx'
 import { ScrollUpButton } from '../components/ScrollUpButton'
 import '../styles/Theme.css'
 import '../styles/Diagonals.css'
+import CurBasi from '../components/Cursos/Cur_basi.astro';
+import CurInter from '../components/Cursos/Cur_inter.astro';
+import Team from '../components/Team/[ecuipo].astro';
 ---
 
 <Layout title="CripTec">
@@ -26,7 +29,11 @@ import '../styles/Diagonals.css'
   <Pricing client:load />
   <Brands client:load />
   <Testimonials client:load />
-  <Blog client:load /> 
+  <Blog client:load />
+  <CurBasi></CurBasi>
+  <CurInter></CurInter>
+  <Team></Team>
+  
   <Contac client:load />
   <Footer />
   <ScrollUpButton client:load />

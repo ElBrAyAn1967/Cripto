@@ -1,0 +1,34 @@
+---
+import BentoItem from './BentoItem.astro';
+---
+
+<section class="w-full max-w-full mx-0 p-0 sm:p-10 md:p-20 grid grid-cols-10 gap-4">
+
+  <!-- Elemento de imagen -->
+  <BentoItem class="col-span-10 md:col-span-6" title="IMAGEN" subtitle="Descripción de la imagen">
+    <!-- Imagen para Móviles -->
+    <div slot="image" 
+         class="relative w-full h-[300px] sm:h-[400px] md:hidden group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" 
+         style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735273886/shiba1_eqqomc.webp')">
+         
+    </div>
+
+    <!-- Imagen para Pantallas Grandes (PC) -->
+    <div slot="image" 
+         class="hidden md:block absolute left-0 top-0 bottom-0 h-full w-full group-hover:scale-110 transition-transform duration-1000 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat bg-blue-950 -z-10" 
+         style="background-image: url('https://res.cloudinary.com/daucozfk6/image/upload/v1735273886/shiba1_eqqomc.webp')">
+    </div>
+  </BentoItem>
+
+  <!-- Área para información -->
+  <div class="col-span-10 md:col-span-4">
+    <div class="p-4 sm:p-6 rounded-lg shadow-lg">
+      <h2 class="text-xl sm:text-2xl font-bold mb-4">Información</h2>
+      <p class="text-sm sm:text-base md:text-lg mb-4">Aquí puedes poner la información que desees mostrar... Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eaque sequi culpa illum et quis minus itaque placeat, vero ipsum expedita voluptas omnis nostrum! Voluptatem tenetur perspiciatis doloribus hic dolore.</p>
+    </div>
+  </div>
+
+</section>
+
+
+

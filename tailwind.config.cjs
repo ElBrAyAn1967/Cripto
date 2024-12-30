@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primaryColor: "rgb(220, 135, 30)", /**Color Bitcoin dineros */
-        secondaryColor: "rgb(21 229 244)",
+        secondaryColor: "rgb(21 229 244)", /*Color azul claro */ 
         primaryText: "rgb(255,255,255)",
         secondaryText: "rgb(174, 178, 183)",
         bgDark1: "rgb(31, 32, 35)",

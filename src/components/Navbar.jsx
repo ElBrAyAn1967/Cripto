@@ -68,7 +68,7 @@ export const Navbar = () => {
           <div className="grow basis-0 justify-end hidden lg:flex">
             <a
               className="text-white main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3 border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-              href="#"
+              href="/inicio"
               aria-label="Inicio de Sesion"
             >
               <GithubIcon />
@@ -106,7 +106,7 @@ export const Navbar = () => {
                   {label}
                 </a>
               ))}
-              <a className="outlined-button pl-6 pr-8 pt-2 pb-2 flex" href="#" aria-label="Inicio de Sesion">
+              <a className="outlined-button pl-6 pr-8 pt-2 pb-2 flex" href="/inicio" aria-label="Inicio de Sesion">
                 <GithubIcon />
                 Inicio de Sesion
               </a>

@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+<div class="login-page">
+<Layout title="Login"   >
+    <section class="menu h-screen overflow-hidden">
+        <div class="wallet container flex flex-col md:flex-row h-full relative">
+            <!-- Formulario de Iniciar Sesión -->
+            <div class="login-section h-full flex flex-col justify-center items-center w-full md:w-1/2 p-4">
+                <!-- Login Form -->
+                <form class="login-form w-full max-w-sm flex flex-col  items-center">
+                    <h2 class="text-3xl mb-5 font-bold">Iniciar Sesión</h2>
+                    <span class="text-xs mb-4">Use su correo y contraseña</span>
+                      <div class="w-full h-10 mb-2  gap-2 px-4 bg-[#EEEEEE]">
+                        <input type="text" placeholder="Email" class="w-full h-full bg-inherit border-none outline-none" />
+                      </div>
+                      <div class="w-full h-10 mb-2  gap-2 px-4 bg-[#EEEEEE]">
+                        <input type="password" placeholder="Password" class="w-full h-full bg-inherit border-none outline-none" />
+                      </div>
+                    <a href="#" class="text-sm text-white mt-1 mb-5">¿Olvidaste tu contraseña?</a>
+                 <button class="w-full h-[45px] mt-2 text-base">INICIAR SESIÓN</button>
+                </form>
+                <!-- Registration Form -->
+                <form class="registration-form w-full max-w-sm text-center flex-col justify-center items-center hidden">
+                    <h2 class="text-3xl mb-5 font-bold">Registrarse</h2>
+                    <span class="text-xs mb-4">Cree su cuenta ingresando la siguiente información</span>
+                    <div class="w-full h-10 mb-2  gap-2 px-4 bg-[#EEEEEE]">
+                        <input type="text" placeholder="Nombre Completo" class="w-full h-full bg-inherit border-none outline-none" />
+                    </div>
+                    <div class="w-full h-10 mb-2  gap-2 px-4 bg-[#EEEEEE]">
+                        <input type="text" placeholder="Email" class="w-full h-full bg-inherit border-none outline-none" />
+                    </div>
+                    <div class="w-full h-10 mb-2  gap-2 px-4 bg-[#EEEEEE]">
+                        <input type="password" placeholder="Password" class="w-full h-full bg-inherit border-none outline-none" />
+                    </div>
+                    <button class="w-full h-[45px] mt-2 text-base">REGISTRARSE</button>
+                </form>
+            </div>
+            <!-- Sección de Bienvenida -->
+            <div class="welcome-section flex flex-col justify-center items-center text-white relative w-full md:w-1/2 p-4 bg-[#3AB397]">
+                <div class="flex flex-col items-center gap-5 px-12 text-white z-10">
+                    <h3 class="text-3xl md:text-4xl" id="welcome-title">¡Bienvenido!</h3>
+                    <p class="text-center text-sm md:text-base" id="welcome-message">Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                    <button class="border-2 border-white bg-transparent text-white py-2 px-4 rounded-md hover:bg-white hover:text-[#3AB397]" id="btn-sign-up">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+</div>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+  const btnSignUp = document.getElementById('btn-sign-up');
+  const loginForm = document.querySelector('.login-form');
+  const registrationForm = document.querySelector('.registration-form');
+  const welcomeTitle = document.getElementById('welcome-title');
+  const welcomeMessage = document.getElementById('welcome-message');
+  // Verifica que los elementos existan antes de usarlos
+  if (container && btnSignUp && loginForm && registrationForm && welcomeTitle && welcomeMessage) {
+    const toggleForms = () => {
+      const isDesktop = window.innerWidth >= 768;
+      if (isDesktop) {
+        container.classList.toggle('toggle');
+        if (container.classList.contains('toggle')) {
+          welcomeTitle.textContent = "¡Únete a nosotros!";
+          welcomeMessage.textContent = "Cree una cuenta y disfrute de todas las ventajas que ofrecemos.";
+          loginForm.classList.add('hidden');
+          registrationForm.classList.remove('hidden');
+        } else {
+          welcomeTitle.textContent = "¡Bienvenido de nuevo!";
+          welcomeMessage.textContent = "Ingrese sus credenciales para acceder a su cuenta.";
+          loginForm.classList.remove('hidden');
+          registrationForm.classList.add('hidden');
+        }
+      } else {
+        loginForm.classList.toggle('hidden');
+        registrationForm.classList.toggle('hidden');
+        if (registrationForm.classList.contains('hidden')) {
+          welcomeTitle.textContent = "¡Bienvenido de nuevo!";
+          welcomeMessage.textContent = "Ingrese sus credenciales para acceder a su cuenta.";
+        } else {
+          welcomeTitle.textContent = "¡Únete a nosotros!";
+          welcomeMessage.textContent = "Cree una cuenta y disfrute de todas las ventajas que ofrecemos.";
+        }
+      }
+    };
+    btnSignUp.addEventListener('click', toggleForms);
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && container.classList.contains('toggle')) {
+        loginForm.classList.add('hidden');
+        registrationForm.classList.remove('hidden');
+      } else if (window.innerWidth >= 768 && !container.classList.contains('toggle')) {
+        loginForm.classList.remove('hidden');
+        registrationForm.classList.add('hidden');
+      }
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Selecciona los elementos de navegación y el botón "Connect Wallet"
+  const headerNav = document.querySelector('#header-nav nav');
+  const connectWalletButton = document.querySelector('#header-nav a[href="/inicio"]');
+
+  // Asegúrate de que los elementos existen y que son de tipo HTMLElement antes de ocultarlos
+  if (headerNav instanceof HTMLElement) {
+    headerNav.style.display = 'none';
+  }
+  if (connectWalletButton instanceof HTMLElement) {
+    connectWalletButton.style.display = 'none';
+  }
+});
+
+
+  </script>
+<style>
+  /* Oculta el menú de navegación y el botón 'Connect Wallet' */
+  .header-login nav,
+  .header-login .lg\:flex {
+    display: none !important;
+  }
+  /* Mantiene visible solo el logo */
+  .header-login img {
+    display: block !important;
+  }
+  .container {
+    transition: all 0.5s ease-in-out;
+  }
+  .container.toggle .welcome-section {
+    transform: translateX(-100%);
+  }
+  .container.toggle .login-section {
+    transform: translateX(100%);
+  }
+  .login-section, .welcome-section {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .login-section, .welcome-section {
+      width: 50%;
+    }
+  }
+</style>

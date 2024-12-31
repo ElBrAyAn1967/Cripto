@@ -2,7 +2,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 import { InvitationModal } from "./InvitationModal";
-import featuresdiagonal from "../assets/images/featuresdiagonal.jpg";
+
+const items = [
+  "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+];
 
 export const FeaturesDiagonal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,11 +43,10 @@ export const FeaturesDiagonal = () => {
               Build &amp; Launch without problems
             </h2>
             <p className="mb-16 text-secondaryText leading-loose">
-            "Embark on your Web3 journey and transform your future. Discover a world of innovation
-            , overcome challenges with confidence, and unlock endless possibilities in the decentralized era."
+              "Embark on your Web3 journey and transform your future. Discover a world of innovation, overcome challenges with confidence, and unlock endless possibilities in the decentralized era."
             </p>
             <button
-              className="w-[210px] h-12 contained-button mr-10 "
+              className="w-[210px] h-12 contained-button mr-10"
               onClick={() => setIsModalOpen(true)}
               aria-label="Get started"
             >
@@ -49,9 +55,9 @@ export const FeaturesDiagonal = () => {
           </div>
           <div className="w-4/5 lg:w-1/2 lg:pl-16 flex justify-center mx-auto pt-16 lg:pt-0">
             <img
-              src={featuresdiagonal.src}
+              src={items[0]}
               alt="Feature image"
-              className="rounded-xl  main-border-gray"
+              className="rounded-xl main-border-gray transition-transform transform hover:scale-110 hover:duration-500"
             />
           </div>
         </div>

@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
-
-import feature5 from "../assets/images/feature5.jpg";
-import feature6 from "../assets/images/feature6.jpg";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
+
+const items = [
+  "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+];
 
 export const Features2 = () => (
   <section className="w-full bg-bgDark2 mt-12 sm:mt-24 mb-12 lg:my-20 lg:mb-24 pt-4">
@@ -17,16 +22,16 @@ export const Features2 = () => (
           <div className="mb-8 lg:mb-0 w-full px-2 lg:pl-16 flex flex-col justify-center md:pl-8">
             <div className="mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded">
               <img
-                src={feature5.src}
+                src={items[1]}
                 alt="Feature image 5"
-                className="rounded-xl  main-border-gray"
+                className="rounded-xl main-border-gray transition-transform transform hover:scale-110 hover:duration-500"
               />
             </div>
-            <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded ">
+            <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded">
               <img
-                src={feature6.src}
+                src={items[0]}
                 alt="Feature image 6"
-                className="rounded-xl  main-border-gray"
+                className="rounded-xl main-border-gray transition-transform transform hover:scale-110 hover:duration-500"
               />
             </div>
           </div>
@@ -36,10 +41,10 @@ export const Features2 = () => (
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
             <span className="block-subtitle">Make decisions based on knowledge</span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-            Improve your planning system through new knowledge            </h2>
+              Improve your planning system through new knowledge
+            </h2>
             <p className="mb-12 text-secondaryText leading-loose">
-            Unlock the full potential of Web3 with our seamless and intuitive platform.
-             Track your progress, solve challenges efficiently, and take your learning to the next level with ease.
+              Unlock the full potential of Web3 with our seamless and intuitive platform. Track your progress, solve challenges efficiently, and take your learning to the next level with ease.
             </p>
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">

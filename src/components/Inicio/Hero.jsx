@@ -1,11 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
 import { InvitationModal } from "../InvitationModal";
-import dashboard from "../../assets/images/dashboard.jpg";
+
+const items = [
+  "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+];
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentItemIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }, 3000); // Cambia cada 3 segundos
+
+    return () => clearInterval(interval); // Limpiar intervalo al desmontar el componente
+  }, []);
+
   return (
     <section
       className="w-screen flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
@@ -86,11 +102,11 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center">
+          <div className="carosel-item relative w-screen flex justify-center">
             <img
-              src={dashboard.src}
+              src={items[currentItemIndex]}
               alt="Dashboard image"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="carousel-item w-4/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>

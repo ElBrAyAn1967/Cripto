@@ -1,0 +1,94 @@
+
+
+<div id="default-carousel" class="relative w-full p-20" data-carousel="slide">
+    <!-- Contenedor del carrusel -->
+    <div class="relative h-56 sm:h-64 md:h-96 overflow-hidden rounded-lg">
+        <!-- Elementos del carrusel -->
+        <div class="carousel-item  transition-opacity duration-700 ease-in-out" data-carousel-item>
+            <img src="https://res.cloudinary.com/daucozfk6/image/upload/c_fill,ar_16:9,q_auto,f_auto,w_800/v1735273886/shiba1_eqqomc.webp" class="absolute block w-full h-full object-cover" alt="...">
+        </div>
+        <div class="carousel-item opacity-0 transition-opacity duration-700 ease-in-out" data-carousel-item>
+            <img src="https://res.cloudinary.com/daucozfk6/image/upload/c_fill,ar_16:9,q_auto,f_auto,w_800/v1735273879/shiba2_rgl8ph.webp" class="absolute block w-full h-full object-cover" alt="...">
+        </div>
+        <div class="carousel-item opacity-0 transition-opacity duration-700 ease-in-out" data-carousel-item>
+            <img src="https://res.cloudinary.com/daucozfk6/image/upload/c_fill,ar_16:9,q_auto,f_auto,w_800/v1735273869/shiba3_nyujdo.webp" class="absolute block w-full h-full object-cover" alt="...">
+        </div>
+        <div class="carousel-item opacity-0 transition-opacity duration-700 ease-in-out" data-carousel-item>
+            <img src="https://res.cloudinary.com/daucozfk6/image/upload/c_fill,ar_16:9,q_auto,f_auto,w_800/v1735272972/Criptec-largo_l4xi2n.webp" class="absolute block w-full h-full object-cover" alt="...">
+        </div>
+        <div class="carousel-item opacity-0 transition-opacity duration-700 ease-in-out" data-carousel-item>
+            <img src="https://res.cloudinary.com/daucozfk6/image/upload/c_fill,ar_16:9,q_auto,f_auto,w_800/v1735272976/antisat_oqrsmm.webp" class="absolute block w-full h-full object-cover" alt="...">
+        </div>
+    </div>
+
+    <!-- Controles del carrusel -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<script>
+    const items = document.querySelectorAll('[data-carousel-item]');
+    let currentItem = 0;
+
+    function showItem(index: number) {
+        items[currentItem]?.classList.remove('opacity-100');
+        items[currentItem]?.classList.add('opacity-0');
+        items[index]?.classList.remove('opacity-0');
+        items[index]?.classList.add('opacity-100');
+        currentItem = index;
+    }
+
+    const prevButton = document.querySelector('[data-carousel-prev]');
+    const nextButton = document.querySelector('[data-carousel-next]');
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            showItem((currentItem - 1 + items.length) % items.length);
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            showItem((currentItem + 1) % items.length);
+        });
+    }
+
+    // Soporte para deslizamiento táctil
+    let startX = 0;
+    let endX = 0;
+
+    const carousel = document.getElementById('default-carousel');
+
+if (carousel) {
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+
+        if (startX > endX + 50) {
+            showItem((currentItem + 1) % items.length);
+        } else if (startX < endX - 50) {
+            showItem((currentItem - 1 + items.length) % items.length);
+        }
+    });
+} else {
+    console.error('El elemento #default-carousel no existe en el DOM.');
+}
+
+</script>

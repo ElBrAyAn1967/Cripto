@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
-
-import feature1 from "../assets/images/feature1.jpg";
-import feature2 from "../assets/images/feature2.jpg";
-import feature3 from "../assets/images/feature3.jpg";
-import feature4 from "../assets/images/feature4.jpg";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
+
+const items = [
+  "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+];
 
 export const Features1 = () => {
   return (
     <section
-      className="w-full bg-bgDark2 pt-24 -mt-8  mb-8 sm:-mt-8 sm:mb-24 xl:-mt-8 2xl:mt-0    md:pt-[12vw] lg:pt-16"
+      className="w-full bg-bgDark2 pt-24 -mt-8 mb-8 sm:-mt-8 sm:mb-24 xl:-mt-8 2xl:mt-0 md:pt-[12vw] lg:pt-16"
       id="features"
     >
       <motion.div
@@ -23,11 +26,10 @@ export const Features1 = () => {
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Unlike any course platform
+                Unlike any course platform
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
-              Discover from the hand of criptec the new generation of web3 technology,
-               accompanied by courses, training and scholarships
+                Discover from the hand of criptec the new generation of web3 technology, accompanied by courses, training and scholarships
               </p>
               <ul className="mb-6 text-primaryText">
                 <li className="mb-4 flex">
@@ -49,35 +51,35 @@ export const Features1 = () => {
             <div className="mb-8 lg:mb-0 w-full sm:w-1/2 px-2 lg:px-0">
               <div className="mb-4 py-3 pl-3 pr-2 rounded">
                 <img
-                  src={feature1.src}
+                  src={items[0]}
                   alt="Feature image 1"
-                  className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                  className="rounded-xl main-border-gray mx-auto sm:mx-unset transition-transform transform hover:scale-110 hover:duration-500"
                   aria-label="Feature image 1"
                 />
               </div>
-              <div className="py-3 pl-3 pr-2 rounded ">
+              <div className="py-3 pl-3 pr-2 rounded">
                 <img
-                  src={feature2.src}
+                  src={items[1]}
                   alt="Feature image 2"
-                  className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                  className="rounded-xl main-border-gray mx-auto sm:mx-unset transition-transform transform hover:scale-110 hover:duration-500"
                   aria-label="Feature image 2"
                 />
               </div>
             </div>
-            <div className="w-1/2 lg:mt-20  pt-12 lg:pt-0 px-2 hidden sm:inline-block">
-              <div className="mb-4 py-3 pl-3 pr-2 rounded-lg ">
+            <div className="w-1/2 lg:mt-20 pt-12 lg:pt-0 px-2 hidden sm:inline-block">
+              <div className="mb-4 py-3 pl-3 pr-2 rounded-lg">
                 <img
-                  src={feature3.src}
+                  src={items[2]}
                   alt="Feature image 3"
-                  className="rounded-xl  main-border-gray"
+                  className="rounded-xl main-border-gray transition-transform transform hover:scale-110 hover:duration-500"
                   aria-label="Feature image 3"
                 />
               </div>
-              <div className="py-3 pl-3 pr-2 rounded-lg ">
+              <div className="py-3 pl-3 pr-2 rounded-lg">
                 <img
-                  src={feature4.src}
+                  src={items[3]}
                   alt="Feature image 4"
-                  className="rounded-xl  main-border-gray"
+                  className="rounded-xl main-border-gray transition-transform transform hover:scale-110 hover:duration-500"
                   aria-label="Feature image 4"
                 />
               </div>

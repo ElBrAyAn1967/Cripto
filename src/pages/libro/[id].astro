@@ -54,14 +54,21 @@ export const prerender = true;
           <span>Publicado el 15 de noviembre de 2024</span>
         </div>
 
-        <p class="text-base text-gray-200 mb-6 md:text-lg">{description}</p>
+        
+
+        <p class="text-base text-gray-200 mb-6 md:text-lg overflow-hidden line-clamp-4">{description}</p>
+
         <div>
-          <Content/>
-          <button class="bg-green-600 text-white px-6 py-2 w-full md:w-auto rounded-full hover:bg-green-700 transition">
+          <Content />
+          <br>
+          <button  class="bg-green-600 text-white px-6 py-2 w-full md:w-auto rounded-full hover:bg-green-700 transition">
             Ver curso
           </button>
+          
         </div>
       </div>
+   
+
       
     </div>
   </div>

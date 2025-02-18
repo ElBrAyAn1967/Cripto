@@ -1,6 +1,23 @@
 import { defineCollection, z } from "astro:content";
 
-const schema = z.object({
+// Esquema para cada video
+const videoSchema = z.object({
+  title: z.string(),         // Título del video
+  description: z.string(),   // Descripción del video
+  youtubeId: z.string(),     // ID del video de YouTube
+  date: z.string()           // Fecha en formato YYYY-MM-DD
+});
+
+// Esquema para la colección "gratis" que contiene un array de videos
+const gratisCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    videos: z.array(videoSchema) // Lista de videos
+  }),
+});
+
+// Esquema para la colección de libros
+const bookSchema = z.object({
   title: z.string(),
   author: z.string(),
   img: z.string(),
@@ -11,18 +28,11 @@ const schema = z.object({
     usa: z.string().url(),
   }),
 });
+
+// Definir la colección de libros
 const books = defineCollection({
-  schema
+  schema: bookSchema,
 });
-
-const Inter = defineCollection({
-  schema
-});
-
-const Random = defineCollection({
-  schema
-});
-
 
 // Esquema para la colección 'team'
 const teamSchema = z.object({
@@ -38,9 +48,14 @@ const teamSchema = z.object({
   ),
 });
 
+// Definir la colección 'team'
 const team = defineCollection({
-  schema: teamSchema
+  schema: teamSchema,
 });
 
-
-export const collections = { Inter, books, Random, team };
+// ✅ Exportar todas las colecciones (ahora incluyendo `gratis`)
+export const collections = {
+  books,
+  team,
+  gratis: gratisCollection, // 🔹 Agregar la colección de videos
+};

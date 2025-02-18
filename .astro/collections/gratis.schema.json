@@ -1,0 +1,49 @@
+{
+  "$ref": "#/definitions/gratis",
+  "definitions": {
+    "gratis": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "videos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "youtubeId": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "description",
+              "youtubeId",
+              "date"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "videos"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

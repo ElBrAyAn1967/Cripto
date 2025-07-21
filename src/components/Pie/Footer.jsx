@@ -1,10 +1,10 @@
 
 import { FacebookIcon } from "../../assets/icons/FacebookIcon";
 import { InstagramIcon } from "../../assets/icons/InstagramIcon";
-import { CriptecLogo } from "../../assets/logos/LogoCriptec";
 import { TwitterIcon } from "../../assets/icons/TwitterIcon";
 import { YouTubeIcon } from "../../assets/icons/YoutubeIcon";
 import { DiscordIcon } from "../../assets/icons/DiscordIcon";
+import{LogoMerch} from "../../assets/logos/LogoMerch";
 const footerData = [
   {
     title: "Products",
@@ -30,7 +30,7 @@ export const Footer = () => {
             <div className="w-full lg:w-1/3 mb-16 lg:mb-0 flex flex-col items-center">
               {/* LOGOTIPO */}
               <div className="flex justify-center items-center ">
-                <CriptecLogo className="w-24 h-24" /> {/* Ajusta el tamaño con estas clases */}
+                <LogoMerch className="w-24 h-24" /> {/* Ajusta el tamaño con estas clases */}
               </div>
               {/* REDES SOCIALES */}
               <div className="flex justify-center items-center space-x-4">

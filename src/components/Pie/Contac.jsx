@@ -1,7 +1,7 @@
 import React from "react";
 const Form = () => {
   return (
-    <form className="max-w-full mx-auto md:py-8" action="https://formsubmit.co/2330fe87cb767f8d382e0f32ba7eab79" method="post">
+    <form  id="Contact" className="max-w-full mx-auto md:py-8" action="https://formsubmit.co/2330fe87cb767f8d382e0f32ba7eab79" method="post">
       {/* Email Input */}
       <div className="relative z-0 w-full mb-7 group">
         <input type="email" name="floating_email" id="floating_email"  className="peer block w-full bg-transparent text-sm text-gray-900 border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-blue-600 dark:text-white dark:border-gray-600 dark:focus:border-blue-500" placeholder=" " required/>

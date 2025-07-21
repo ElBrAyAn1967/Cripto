@@ -1,40 +1,125 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { InvitationModal } from "../InvitationModal";
 
+// Cambiamos items a objetos con más info y botones
 const items = [
-  "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+  {
+    title: "Model Y",
+    subtitle: "Agenda una prueba de manejo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+    buttons: [
+      { label: "Ordenar", onClick: () => alert("Ordenar Model Y") },
+      { label: "Más información", onClick: () => alert("Info Model Y") },
+    ],
+  },
+  {
+    title: "Model X",
+    subtitle: "SUV de lujo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+    buttons: [
+      { label: "Ver inventario", onClick: () => alert("Inventario Model X") },
+      { label: "Más información", onClick: () => alert("Info Model X") },
+    ],
+  },
+  {
+    title: "Model Y",
+    subtitle: "Agenda una prueba de manejo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+    buttons: [
+      { label: "Ordenar", onClick: () => alert("Ordenar Model Y") },
+      { label: "Más información", onClick: () => alert("Info Model Y") },
+    ],
+  },
+  {
+    title: "Model X",
+    subtitle: "SUV de lujo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+    buttons: [
+      { label: "Ver inventario", onClick: () => alert("Inventario Model X") },
+      { label: "Más información", onClick: () => alert("Info Model X") },
+    ],
+  },
+  {
+    title: "Model Y",
+    subtitle: "Agenda una prueba de manejo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload//v1735273886/shiba1_eqqomc.webp",
+    buttons: [
+      { label: "Ordenar", onClick: () => alert("Ordenar Model Y") },
+      { label: "Más información", onClick: () => alert("Info Model Y") },
+    ],
+  },
+  {
+    title: "Model X",
+    subtitle: "SUV de lujo",
+    image:
+      "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
+    buttons: [
+      { label: "Ver inventario", onClick: () => alert("Inventario Model X") },
+      { label: "Más información", onClick: () => alert("Info Model X") },
+    ],
+  },
 ];
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentItemIndex, setCurrentItemIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef(null);
 
+  // Detectar slide activo al hacer scroll
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentItemIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 3000); // Cambia cada 3 segundos
+    const carousel = carouselRef.current;
+    if (!carousel) return;
 
-    return () => clearInterval(interval); // Limpiar intervalo al desmontar el componente
+    const handleScroll = () => {
+      const children = Array.from(carousel.children);
+      const scrollLeft = carousel.scrollLeft;
+      let total = 0;
+      let index = 0;
+
+      for (let i = 0; i < children.length; i++) {
+        total += children[i].offsetWidth;
+        if (scrollLeft + carousel.offsetWidth / 2 < total) {
+          index = i;
+          break;
+        }
+      }
+      setActiveIndex(index);
+    };
+
+    carousel.addEventListener("scroll", handleScroll, { passive: true });
+    return () => carousel.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Scroll al slide al hacer click en punto
+  const scrollToIndex = (index) => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    const children = Array.from(carousel.children);
+    if (children[index]) {
+      children[index].scrollIntoView({ behavior: "smooth", inline: "start" });
+    }
+  };
 
   return (
     <section
-      className="w-screen flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
+      className="w-screen flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
       id="home"
     >
       <div className="w-full md:w-[800px] xl:w-[900px] flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 text-center">
+        {/* Encabezado intacto */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-secondaryColor text-sm sm:text-base mb-6 sm:mt-32 mt-16 font-bold">
-            CripTec
+            Merch3
           </h3>
         </motion.div>
 
@@ -43,12 +128,12 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide text-primaryText px-8 sm:px-8 md:px-20 lg:px-4">
-            <h1 className="inline md:hidden">Web3 training</h1>
-            <h1 className="hidden md:inline">Web3 training</h1>
+          <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-6xl font-bold tracking-wide text-primaryText px-8 sm:px-8 md:px-20 lg:px-4">
+            <h1 className="inline md:hidden">Wearable Exclusive</h1>
+            <h1 className="hidden md:inline">Wearable Exclusive</h1>
           </div>
           <h2 className="mt-2 sm:mt-2 text-xl sm:text-2xl lg:text-3xl xl:text-3xl font-bold tracking-wide text-primaryText px-8 sm:px-20 md:px-24 lg:px-24">
-            Blockchain Courses
+            Digital Identity
           </h2>
         </motion.div>
 
@@ -58,7 +143,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h3 className="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48">
-            We connect the present with the future with cryptocurrencies
+            It evokes clothing or merch as an extension of digital identity in a future Web3
           </h3>
         </motion.div>
 
@@ -73,12 +158,12 @@ export const Hero = () => {
               onClick={() => setIsModalOpen(true)}
               aria-label="Get started"
             >
-              Live courses
+              Claim
             </button>
 
             <button
               href="/Cursos"
-              className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 transform transition-all duration-300 hover:scale-105"
+              className="inline-flex justify-center items-center w-64 sm:w-52 h-12 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-400 transform transition-all duration-300 hover:scale-105"
             >
               <svg
                 className="w-6 h-6 transition-colors duration-500 transform hover:text-black"
@@ -92,42 +177,95 @@ export const Hero = () => {
                   fill="#FFFFFF"
                 />
               </svg>
-              <span className="ms-2">All courses</span>
+              <span className="ms-2">buy</span>
             </button>
           </div>
         </motion.div>
 
+        {/* Carrusel horizontal con scrollbar oculto */}
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+          className="w-full"
         >
-          <div className="carosel-item relative w-screen flex justify-center">
-            <img
-              src={items[currentItemIndex]}
-              alt="Dashboard image"
-              className="carousel-item w-4/6 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
-            />
+          <div
+            ref={carouselRef}
+            className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth space-x-6 px-4 hide-scrollbar"
+            role="list"
+            aria-label="Carrusel de productos"
+            tabIndex={0}
+          >
+            {items.map(({ title, subtitle, image, buttons }, i) => (
+              <motion.div
+                key={title}
+                className="bento-item snap-start flex-shrink-0 min-w-[85%] md:min-w-[40rem] cursor-pointer relative"
+                role="listitem"
+                initial={{ opacity: 0.7, scale: 0.95 }}
+                animate={{
+                  opacity: activeIndex === i ? 1 : 0.7,
+                  scale: activeIndex === i ? 1 : 0.95,
+                  transition: { duration: 0.5 },
+                }}
+                id={`carousel-item-${i}`}
+              >
+                <div className="group border rounded-lg overflow-hidden shadow-lg relative">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-64 md:h-96 object-cover transition-transform duration-1000 ease-in-out group-hover:scale-105 rounded"
+                  />
+                  {/* Texto y botones encima de la imagen */}
+                  <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white p-6 rounded">
+                    <h3 className="font-bold text-2xl md:text-3xl mb-2">{title}</h3>
+                    <p className="mb-4 text-md md:text-lg">{subtitle}</p>
+                    <div className="flex gap-4 flex-wrap justify-center">
+                      {buttons.map(({ label, onClick }) => (
+                        <button
+                          key={label}
+                          onClick={onClick}
+                          className={`${
+                            label.toLowerCase().includes("ordenar") ||
+                            label.toLowerCase().includes("ver")
+                              ? "bg-blue-600 text-white hover:bg-blue-700"
+                              : "bg-white text-black hover:bg-gray-200"
+                          } px-4 py-2 rounded transition`}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Puntos de navegación */}
+          <div
+            id="dots"
+            className="flex justify-center gap-2 mt-6"
+            role="tablist"
+            aria-label="Navegación del carrusel"
+          >
+            {items.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollToIndex(i)}
+                className={`dot w-3 h-3 rounded-full transition-all duration-300 ease-in-out ${
+                  activeIndex === i ? "bg-black scale-125" : "bg-gray-400"
+                }`}
+                aria-selected={activeIndex === i}
+                role="tab"
+                aria-controls={`carousel-item-${i}`}
+                tabIndex={activeIndex === i ? 0 : -1}
+                aria-label={`Ir al slide ${i + 1}`}
+              />
+            ))}
           </div>
         </motion.div>
-
-        <div className="relative w-screen flex justify-center">
-          <div className="shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52 hidden lg:block">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-              className="bg-bgDark2"
-            >
-              <path
-                d="M1200 0L0 0 598.97 114.72 1200 0z"
-                className="shape-fill bg-bgDark1 fill-bgDark1 drop-shadow-[0_0_20px_rgb(247,147,26)]"
-              ></path>
-            </svg>
-          </div>
-        </div>
       </div>
+
       {isModalOpen && (
         <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
       )}

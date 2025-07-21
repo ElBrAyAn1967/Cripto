@@ -41,3 +41,13 @@
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
+
+/* En tu archivo global CSS (ej: index.css o global.css) */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}

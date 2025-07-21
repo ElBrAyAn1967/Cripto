@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
-import { GithubIcon } from "../assets/icons/GithubIcon";
-import { CriptecLogo } from "../assets/logos/LogoCriptec";
+import {LogoMerch} from "../assets/logos/LogoMerch"; 
 
 const navbarLinks = [
-  { label: "CripTec", href: "/#home", ariaLabel: "Home" },
-  { label: "Cursos", href: "/#features", ariaLabel: "Features" },
-  { label: "Costos", href: "/#pricing", ariaLabel: "Pricing" },
-  { label: "Doctoralia", href: "/#feedback", ariaLabel: "Feedback" },
+  { label: "Merch", href: "/#home", ariaLabel: "Merch" },
+  { label: "Services", href: "/#Services", ariaLabel: "Services" },
+  { label: "Reclaim", href: "/#Reclaim", ariaLabel: "Reclaim" },
+  { label: "Contact Us", href: "/#Contact", ariaLabel: "Contact Us" },
 ];
 
 export const Navbar = () => {
@@ -46,7 +45,7 @@ export const Navbar = () => {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} exit={{ opacity: 0 }}>
           <a href="/#home" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
-              <CriptecLogo  />
+              <LogoMerch />
             </div>
           </a>
         </motion.div>
@@ -71,8 +70,7 @@ export const Navbar = () => {
               href="/inicio"
               aria-label="Inicio de Sesion"
             >
-              <GithubIcon />
-              <span className="pt-px">Inicio de Sesion</span>
+              <span className="pt-px">Connect</span>
             </a>
           </div>
         </motion.div>
@@ -107,8 +105,8 @@ export const Navbar = () => {
                 </a>
               ))}
               <a className="outlined-button pl-6 pr-8 pt-2 pb-2 flex" href="/inicio" aria-label="Inicio de Sesion">
-                <GithubIcon />
-                Inicio de Sesion
+              
+              Connect
               </a>
             </div>
           </motion.div>

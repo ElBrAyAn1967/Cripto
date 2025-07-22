@@ -1,34 +1,35 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import testimonial1 from "../../assets/images/testimonial1.png";
-import testimonial2 from "../../assets/images/testimonial2.png";
-import testimonial3 from "../../assets/images/testimonial3.png";
+import { FacebookIcon } from "../../assets/icons/FacebookIcon";
+import { TwitterIcon } from "../../assets/icons/TwitterIcon";
+import { InstagramIcon } from "../../assets/icons/InstagramIcon";
 
 const features = [
   {
     title: "Rentabilidad",
     subtitle: "Redes sociales",
     description:
-      "Conecta con tu comunidad a través de productos físicos. Nuestro sistema convierte cada pieza ",
-    image: testimonial1,
-    color: "from-blue-500 to-teal-400",
+      "Conecta con tu comunidad a través de productos físicos. Nuestro sistema convierte cada pieza.",
+    icon: FacebookIcon,
+    color: "from-blue-500/80 to-teal-400/40",
   },
   {
     title: "Pagos con Cripto",
     subtitle: "Dinero",
     description:
       "Recibe pagos en cualquier red y token. Automatizamos la contabilidad Web3 y recompensamos cada compra.",
-    image: testimonial2,
-    color: "from-pink-500 to-purple-500",
+    icon: TwitterIcon,
+    color: "from-pink-500/80 to-purple-500/40",
   },
   {
     title: "Identidad Digital",
     subtitle: "Memes",
     description:
       "Integra NFTs, POAPs o DAOs en tu merch. Cada prenda se convierte en una llave de acceso al ecosistema.",
-    image: testimonial3,
-    color: "from-yellow-500 to-orange-500",
+    icon: InstagramIcon,
+    color: "from-yellow-500/80 to-orange-500/40"
+
   },
 ];
 
@@ -55,6 +56,7 @@ export const Testimonials = () => {
           <div className="flex flex-col lg:flex-row gap-8 px-6 xl:px-0 items-center">
             {features.map((item, index) => {
               const isActive = index === activeIndex;
+              const IconComponent = item.icon;
 
               return (
                 <motion.div
@@ -71,7 +73,9 @@ export const Testimonials = () => {
                     }`}
                 >
                   <div className="flex flex-col items-center text-center">
-                    <div
+                    <motion.div
+                      whileHover={{ scale: 1.25 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
                       className={`p-4 rounded-full mb-4 transition-all duration-700 ease-in-out
                         ${
                           isActive
@@ -79,13 +83,8 @@ export const Testimonials = () => {
                             : "bg-gray-800 group-hover:bg-white/20"
                         }`}
                     >
-                      <img
-                        src={item.image.src}
-                        alt={item.title}
-                        width="40"
-                        height="40"
-                      />
-                    </div>
+                      <IconComponent className="w-10 h-10" />
+                    </motion.div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
                     <p className="text-sm font-medium mb-3 text-gray-400">
                       {item.subtitle}

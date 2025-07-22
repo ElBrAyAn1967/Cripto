@@ -34,19 +34,19 @@ export const Footer = () => {
               </div>
               {/* REDES SOCIALES */}
               <div className="flex justify-center items-center space-x-4">
-                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://www.facebook.com/criptecmxllc" aria-label="Facebook">
+                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://www.facebook.com/profile.php?id=61573583955659" aria-label="Facebook">
                   <FacebookIcon />
                 </a>
-                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://x.com/criptecmxllc"  aria-label="Twitter">
+                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://x.com/merch3_"  aria-label="Twitter">
                   <TwitterIcon />
                 </a>
-                <a  className="inline-block w-10 h-10 p-2 outlined-button"  href="https://www.instagram.com/criptecmxllc" aria-label="Instagram">
+                <a  className="inline-block w-10 h-10 p-2 outlined-button"  href="https://www.instagram.com/merch3.0/" aria-label="Instagram">
                   <InstagramIcon />
                 </a>
-                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://www.youtube.com/@criptecmx_llc" aria-label="Youtube" >
+                <a className="inline-block w-10 h-10 p-2 outlined-button" href="https://www.youtube.com/@fruterotv" aria-label="Youtube" >
                   <YouTubeIcon />
                 </a>
-                <a className="inline-block w-10 h-10 p-2 outlined-button"  href="https://discord.gg/khQwszHZcT" aria-label="Discord"  >
+                <a className="inline-block w-10 h-10 p-2 outlined-button"  href="https://www.threads.com/@merch3.0" aria-label="Discord"  >
                   <DiscordIcon />
                 </a>
               </div>

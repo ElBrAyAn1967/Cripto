@@ -12,7 +12,7 @@ const features = [
     description:
       "Conecta con tu comunidad a través de productos físicos. Nuestro sistema convierte cada pieza.",
     icon: FacebookIcon,
-    color: "from-blue-500/80 to-teal-400/40",
+    color: "from-[#E71D36]/80 to-[#E71D36]/40",
   },
   {
     title: "Pagos con Cripto",
@@ -20,7 +20,7 @@ const features = [
     description:
       "Recibe pagos en cualquier red y token. Automatizamos la contabilidad Web3 y recompensamos cada compra.",
     icon: TwitterIcon,
-    color: "from-pink-500/80 to-purple-500/40",
+    color: "from-[#3E3EF4]/80 to-[#3E3EF4]/40",
   },
   {
     title: "Identidad Digital",
@@ -28,7 +28,7 @@ const features = [
     description:
       "Integra NFTs, POAPs o DAOs en tu merch. Cada prenda se convierte en una llave de acceso al ecosistema.",
     icon: InstagramIcon,
-    color: "from-yellow-500/80 to-orange-500/40"
+    color: "from-[#FAFAFA]/80 to-[#FAFAFA]/40"
 
   },
 ];

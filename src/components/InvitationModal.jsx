@@ -8,7 +8,7 @@ export const InvitationModal = ({ setIsOpen }) => (
   <AnimatePresence>
     <motion.div initial={{ opacity: 0, zIndex: 50 }} animate={{ opacity: 1, zIndex: 50 }} transition={{ duration: 0.1 }}  exit={{ opacity: 0 }} >
       <div className="w-full h-full  bg-bgDarkTransparentDarker fixed top-0 left-0 flex  z-50 justify-center items-center"  onClick={() => setIsOpen(false)} >
-        <div  className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter main-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8 fixed mx-auto z-50" onClick={(e) => e.stopPropagation()} >
+        <div  className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter main-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8  mx-auto z-50" onClick={(e) => e.stopPropagation()} >
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
 
@@ -17,18 +17,18 @@ export const InvitationModal = ({ setIsOpen }) => (
                 Subscribe Now
               </h2>
               <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
-                Winter is coming Crypto
+               Merch Collection
               </h2>
 
 
               <ul className="mb-6 text-primaryText mt-12">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>artificial intelligence</span>
+                  <span>Unique merch</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Trading Development</span>
+                  <span>Brand positioning</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />

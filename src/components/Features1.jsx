@@ -26,10 +26,10 @@ export const Features1 = () => {
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Unlike any course platform
+                Unlike any platform
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
-                Discover from the hand of criptec the new generation of web3 technology, accompanied by courses, training and scholarships
+                Discover how to boost your brand within web3 technology with merch3.
               </p>
               <ul className="mb-6 text-primaryText">
                 <li className="mb-4 flex">
@@ -38,7 +38,7 @@ export const Features1 = () => {
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Investment Systems</span>
+                  <span>Unique merch</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />

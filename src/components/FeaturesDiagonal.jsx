@@ -5,11 +5,7 @@ import { useState } from "react";
 import { InvitationModal } from "./InvitationModal";
 
 const items = [
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1739421675/gratis_go3prb.jpg",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273879/shiba2_rgl8ph.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735273869/shiba3_nyujdo.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272972/Criptec-largo_l4xi2n.webp",
-  "https://res.cloudinary.com/daucozfk6/image/upload/v1735272976/antisat_oqrsmm.webp",
+  "https://res.cloudinary.com/daucozfk6/image/upload/v1751057979/Merch3-Logo_white-transparentBG_kwgfgg.svg",
 ];
 
 export const FeaturesDiagonal = () => {
@@ -39,12 +35,12 @@ export const FeaturesDiagonal = () => {
       >
         <div className=" 2xl:w-[1150px] xl:w-[1050px]  md:w-4/5 flex justify-center bg-bgDark1 pt-12 lg:pt-24 pb-8 lg:pb-20 mx-auto lg:flex-row flex-col">
           <div className="w-3/4 lg:w-1/2 flex flex-col lg:mx-unset mx-auto">
-            <span className="block-subtitle">Accelerate Your Success</span>
+            <span className="block-subtitle">Hackaton </span>
             <h2 className="mt-10 mb-8 text-4xl lg:text-5xl block-big-title">
-              Build &amp; Launch without problems
+              Platform &amp; Community
             </h2>
             <p className="mb-16 text-secondaryText leading-loose">
-              "Embark on your Web3 journey and transform your future. Discover a world of innovation, overcome challenges with confidence, and unlock endless possibilities in the decentralized era."
+              "Transform the event space into an interactive playground where each action has a digital reward that can be converted into a physical product on the same day."
             </p>
             
             <a href="../libro/gratis" rel="noreferrer">

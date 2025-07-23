@@ -44,7 +44,7 @@ export const Features2 = () => (
               Improve your planning system through new knowledge
             </h2>
             <p className="mb-12 text-secondaryText leading-loose">
-              Unlock the full potential of Web3 with our seamless and intuitive platform. Track your progress, solve challenges efficiently, and take your learning to the next level with ease.
+              Unlock the full potential of Web3 with our seamless and intuitive platform. 
             </p>
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">

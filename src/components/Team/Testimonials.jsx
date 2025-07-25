@@ -10,7 +10,7 @@ const features = [
     title: "Rentabilidad",
     subtitle: "Redes sociales",
     description:
-      "Conecta con tu comunidad a través de productos físicos. Nuestro sistema convierte cada pieza.",
+      "Conecta con tu comunidad a través de productos físicos. Nuestro sistema convierte cada pieza. lorem ds asdnsad sajdnksnkajnkjdsa ",
     icon: FacebookIcon,
     color: "from-[#E71D36]/80 to-[#E71D36]/40",
   },

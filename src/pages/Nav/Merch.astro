@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+// Componentes globales
+import { Navbar } from '../../components/Navbar.jsx'
+import { ScrollUpButton } from '../../components/ScrollUpButton'
+import { Footer } from '../../components/Pie/Footer.jsx'
+
+
+
+// Estilos
+import '../../styles/Theme.css'
+import '../../styles/Diagonals.css'
+import Pedido from '../../components/Pedidos/Pedido.jsx'
+---
+
+<Layout title="Merch3">
+  <Navbar client:load />
+  <br /><br /><br /><br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center">Merch3</h1>
+      </div>
+    </div>
+  </div>
+  <Pedido client:load />
+  <Footer />
+  <ScrollUpButton client:load />
+</Layout>

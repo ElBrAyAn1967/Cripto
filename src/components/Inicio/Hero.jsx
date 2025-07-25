@@ -177,7 +177,8 @@ export const Hero = () => {
                   fill="#FFFFFF"
                 />
               </svg>
-              <span className="ms-2">buy</span>
+              <a href="/Nav/Merch"><span  className="ms-2"> buy</span></a>
+
             </button>
           </div>
         </motion.div>

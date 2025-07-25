@@ -20,10 +20,11 @@ module.exports = {
         quoteIconColor: "rgb(178, 184, 205)"
       },
       fontFamily: {
-        mona: ["'Mona Sans'", "sans-serif"],
-        hubot: ["'Hubot Sans'", "sans-serif"],
-        Inter: ["'Inter'", "sans-serif"],
-      },
+   sans: ["'Mona Sans'", "sans-serif"],
+  mona: ["'Mona Sans'", "sans-serif"],     
+  hubot: ["'Hubot Sans'", "sans-serif"],
+},
+
       screens: {
         xs: "530px",
         sm: "640px",

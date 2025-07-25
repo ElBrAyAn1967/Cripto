@@ -1,53 +1,51 @@
-/* Typography */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.block-title {
-  @apply text-primaryText text-3xl font-bold tracking-normal;
-}
-.block-big-title {
-  @apply text-primaryText text-4xl xl:text-5xl font-bold tracking-normal;
-}
-.block-subtitle {
-  @apply text-xs text-secondaryColor  tracking-wider font-bold uppercase;
-}
-.content-title {
-  @apply text-primaryText text-lg font-bold tracking-normal;
-}
-.content-text-white {
-  @apply text-primaryText text-base leading-relaxed;
-}
-.content-text-gray {
-  @apply text-gray-400 text-base;
-}
+@layer components {
+  /* Typography */
+  .block-title {
+    @apply text-primaryText text-3xl font-bold tracking-normal font-mona;
+  }
+  .block-big-title {
+    @apply text-primaryText text-4xl xl:text-5xl font-bold tracking-normal font-mona;
+  }
+  .block-subtitle {
+    @apply text-xs text-secondaryColor tracking-wider font-bold uppercase font-hubot;
+  }
+  .content-title {
+    @apply text-primaryText text-lg font-bold tracking-normal font-mona;
+  }
+  .content-text-white {
+    @apply text-primaryText text-base leading-relaxed font-mona;
+  }
+  .content-text-gray {
+    @apply text-gray-400 text-base font-mona;
+  }
 
-/* Borders */
+  /* Borders */
+  .main-border-gray {
+    @apply border border-solid border-mainBorder;
+  }
+  .main-border-gray-darker {
+    @apply border border-solid border-mainBorderDarker;
+  }
 
-.main-border-gray {
-  @apply border border-solid border-mainBorder;
-}
-.main-border-gray-darker {
-  @apply border border-solid border-mainBorderDarker;
-}
+  /* Buttons */
+  .contained-button {
+    @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-[#ffb03acf] cursor-pointer transition font-hubot;
+  }
+  .outlined-button {
+    @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3 border-gray-700 text-sm font-hubot;
+  }
 
-/* Buttons */
+  /* Scrollbar */
+  .hide-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+  }
 
-.contained-button {
-  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-[#ffb03acf] cursor-pointer transition;
-}
-.outlined-button {
-  @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3  border-gray-700 text-sm;
-}
-
-/* Preventing FOUC */
-@font-face {
-  font-display: var(--fontsource-Inter-font-display, optional);
-}
-
-/* En tu archivo global CSS (ej: index.css o global.css) */
-.hide-scrollbar {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE y Edge */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Opera */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+  }
 }

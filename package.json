@@ -1,13 +1,13 @@
 {
-  "name": "tailcast",
+  "name": "merch3-0",
   "type": "module",
   "version": "1.0.2",
   "license": "MIT",
-  "description": "Dark themed website template built on AstroJS, designed for fictional startup",
+  "description": "",
   "author": {
-    "name": "Mateusz Wyrębek (matt765)",
-    "email": "mateusz.wyrebek@gmail.com",
-    "url": "https://matt765-portfolio.vercel.app/"
+    "name": "Merch",
+    "email": "b@merch.com",
+    "url": "https://merch.com/"
   },
   "private": true,
   "scripts": {
@@ -20,13 +20,19 @@
   "dependencies": {
     "@astrojs/preact": "^4.0.4",
     "@astrojs/tailwind": "^5.1.4",
+    "@fontsource-variable/hubot-sans": "^5.2.6",
+    "@fontsource-variable/mona-sans": "^5.2.6",
+    "@fontsource/hubot-sans": "^5.2.6",
     "@fontsource/inter": "^5.0.18",
+    "@fontsource/mona-sans": "^5.2.6",
     "@web3auth/base": "^9.5.1",
     "@web3auth/ethereum-provider": "^9.5.1",
     "@web3auth/modal": "^9.5.1",
     "astro": "^5.1.6",
+    "caniuse-lite": "^1.0.30001727",
     "ethers": "^6.13.4",
     "framer-motion": "^11.2.10",
+    "jspdf": "^3.0.1",
     "npm": "^10.8.1",
     "npm-check-updates": "^16.14.20",
     "preact": "^10.25.4",

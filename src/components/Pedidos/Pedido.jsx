@@ -52,10 +52,11 @@ const Form = () => {
 
   return (
     <div className="bg-bgDark1 min-h-screen py-14 px-4 font-mona text-primaryText">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 bg-bgDark2 shadow-xl rounded-xl p-8 border border-mainBorder">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 bg-bgDark2 shadow-xl rounded-xl p-4 sm:p-6 md:p-8 border border-mainBorder">
+        
         {/* RESUMEN */}
         <motion.div
-          className="space-y-6"
+          className="space-y-6 w-full"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -105,7 +106,7 @@ const Form = () => {
 
         {/* FORMULARIO */}
         <motion.form
-          className="space-y-6"
+          className="space-y-6 w-full"
           action="https://formsubmit.co/2330fe87cb767f8d382e0f32ba7eab79"
           method="POST"
           encType="multipart/form-data"
@@ -113,7 +114,7 @@ const Form = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-sm font-medium">Nombre</label>
               <input
@@ -161,7 +162,7 @@ const Form = () => {
           </div>
 
           {formData.merch_type === "Sticker" && (
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium">Tipo de vinil</label>
                 <select
@@ -212,7 +213,7 @@ const Form = () => {
             />
           )}
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="text-sm font-medium">Cantidad</label>
               <input
@@ -258,10 +259,7 @@ const Form = () => {
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 contained-button"
-          >
+          <button type="submit" className="w-full py-3 contained-button">
             Enviar pedido
           </button>
 

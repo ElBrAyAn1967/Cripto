@@ -1,0 +1,16 @@
+/* src/components/calendar-custom.css */
+.react-calendar {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+
+.react-calendar__tile {
+  padding: 10px 6px;
+}
+
+.react-calendar__tile--active {
+  background-color: #2563eb !important; /* azul seleccion */
+  color: white;
+  border-radius: 6px;
+}

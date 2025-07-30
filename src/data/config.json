@@ -1,0 +1,30 @@
+{
+  "viniles": {
+    "blanco": {
+      "ancho": 3200,
+      "largo": 50
+    },
+    "holografico": {
+      "ancho": 21500,
+      "largo": 50
+    }
+  },
+  "costos": {
+    "impresion_por_metro": 750,
+    "corte_lienzo_tabloide": 80,
+    "corte_tabloide": 160,
+    "diseno_unico": 75,
+    "diseno_tabloide": 300,
+    "sobre_envio": 15
+  },
+  "condiciones": {
+    "min_stickers": 100,
+    "stickers_por_tabloide": 200,
+    "stickers_por_medio_tabloide": 100,
+    "min_stickers_por_diseno": 50
+  },
+  "tabloide": {
+    "ancho_en_cm": 80,
+    "medio_tabloide_ancho_en_cm": 50
+  }
+}

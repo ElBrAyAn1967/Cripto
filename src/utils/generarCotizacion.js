@@ -38,7 +38,7 @@ export const descargarCotizacion = (formData) => {
 
   const a = document.createElement("a");
   a.href = url;
-  a.download = "cotizacion.txt";
+  a.download = "cotizacion.pdf";
   a.click();
   URL.revokeObjectURL(url);
 };

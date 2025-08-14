@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
-import {
-  getAvailabilityLevel,
-  getAvailabilityColor,
-  getAvailabilityTooltip
-} from "../../utils/calendarAvailability";
+import { getAvailabilityLevel, getAvailabilityColor, getAvailabilityTooltip} from "../../utils/calendarAvailability";
 
 const CalendarField = ({ value, onChange }) => {
   const [selectedDate, setSelectedDate] = useState(value ? new Date(value) : new Date());

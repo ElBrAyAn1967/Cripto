@@ -18,8 +18,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/preact": "^4.0.4",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/preact": "^4.1.0",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource-variable/hubot-sans": "^5.2.6",
     "@fontsource-variable/mona-sans": "^5.2.6",
     "@fontsource/hubot-sans": "^5.2.6",
@@ -28,7 +28,7 @@
     "@web3auth/base": "^9.5.1",
     "@web3auth/ethereum-provider": "^9.5.1",
     "@web3auth/modal": "^9.5.1",
-    "astro": "^5.1.6",
+    "astro": "^5.13.0",
     "caniuse-lite": "^1.0.30001727",
     "ethers": "^6.13.4",
     "framer-motion": "^11.2.10",
@@ -41,7 +41,7 @@
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.1.4",
+    "@astrojs/react": "^4.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }

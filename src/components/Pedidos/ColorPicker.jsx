@@ -22,13 +22,13 @@ const ColorPicker = ({ selectedColor, onChange }) => {
   return (
     <div className="mt-4">
       <label className="text-sm font-medium block mb-2">Colores disponibles</label>
-      <div class="" className=" flex gap-4 overflow-x-auto pb-2">
+      <div className="flex gap-4 overflow-x-auto pb-2 hide-scrollbar">
         {colorOptions.map((color) => (
           <button
             key={color.code}
             type="button"
             onClick={() => onChange(color.code)}
-            className="flex flex-col items-center min-w-[48px] focus:outline-none"
+            className="flex flex-col items-center min-w-[48px] focus:outline-none mt-2"
           >
             <div
               className={`w-10 h-10 rounded-full border-2 ${

@@ -1,10 +1,6 @@
 ---
-    import "@fontsource-variable/mona-sans"; // ✅ Ya no debe fallar
-    import "@fontsource-variable/hubot-sans"; // ✅ Ya no debe fallar
-    import "@fontsource-variable/mona-sans";
-    import "@fontsource-variable/hubot-sans";
-
-  
+import "@fontsource-variable/mona-sans"; // ✅ Fuente 1
+import "@fontsource-variable/hubot-sans"; // ✅ Fuente 2
 
 export interface Props {
   title: string;
@@ -18,12 +14,9 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/daucozfk6/image/upload/v1751057891/Merch3-Logo-black-transparentBG_atavfd.png" />
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/daucozfk6/image/upload/v1751057891/Merch3-Logo-black-transparentBG_atavfd.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="Landing Page de merch3"
-      content="Merch3 es una plataforma de comercio electrónico que ofrece una amplia gama de productos y servicios relacionados con la moda, tecnología y estilo de vida. Descubre lo último en tendencias y compra con confianza."
-    />
+    <meta name="description" content="Merch3 es una plataforma de comercio electrónico que ofrece una amplia gama de productos y servicios relacionados con la moda, tecnología y estilo de vida. Descubre lo último en tendencias y compra con confianza." />
     <title>{title}</title>
   </head>
   <body class="bg-bgDark2">
@@ -32,7 +25,7 @@ const { title } = Astro.props;
     </main>
     <style is:global>
       html {
-      font-family: 'Mona Sans', 'Hubot Sans', 'Inter', sans-serif;
+        font-family: 'Mona Sans', 'Hubot Sans', 'Inter', sans-serif;
         background-color: #26272b;
         overflow-x: hidden;
         scroll-behavior: smooth !important;
